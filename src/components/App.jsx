@@ -12,11 +12,11 @@ export const App = () => {
 
   const onLeaveFeedback = option => {
     if (option === 'good') {
-      setGood(good + 1);
+      setGood(prevGood => prevGood + 1);
     } else if (option === 'neutral') {
-      setNeutral(neutral + 1);
+      setNeutral(prevNeutral => prevNeutral + 1);
     } else if (option === 'bad') {
-      setBad(bad + 1);
+      setBad(prevBad => prevBad + 1);
     } else {
       return;
     }
